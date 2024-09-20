@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="chatContainer">
+      <div id="content"></div>
+      <div class="input-area">
+        <label for="fileInput" class="file-input-label"></label>
+        <input
+          id="fileInput"
+          type="file"
+          style="display: none"
+          aria-label="Attach a file"
+        />
+        <span id="fileName" style="display: none"></span>
+        <input
+          id="input"
+          type="text"
+          placeholder="Type your message here..."
+          autocomplete="off"
+        />
+        <button class="send-button"></button>
+      </div>
+    </div>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./frontend.js"></script>
+    <script>
+      document.getElementById("fileInput").onchange = function () {
+        var fileName = this.files[0].name;
+        var fileNameDisplay = document.getElementById("fileName");
+        if (fileNameDisplay) {
+          fileNameDisplay.textContent = fileName;
+          fileNameDisplay.style.display = "inline"; // Make the file name visible when a file is selected
+        } else {
+          console.log("fileName element not found");
+        }
+      };
+    </script>
+  </body>
+</html>

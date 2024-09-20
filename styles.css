@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    background: #f2f3f5;
+    overflow-x: hidden;
+}
+
+#chatContainer {
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #fff; 
+    padding: 10px; 
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    overflow-y: auto; 
+    height: calc(100% - 60px); 
+    padding: 10px;
+    margin-bottom: 60px; 
+}
+
+.message {
+    display: flex; 
+    padding: 8px 12px;
+    border-radius: 18px;
+    margin: 5px;
+    word-wrap: break-word; 
+    align-items: center; 
+}
+
+.outgoing, .incoming {
+    margin-bottom: 2px; 
+    max-width: 60%; 
+    width: fit-content; 
+}
+
+.outgoing {
+    background-color: #0084ff;
+    color: white;
+    align-self: flex-start; 
+}
+
+.incoming {
+    background-color: #e4e6eb;
+    color: #333;
+    align-self: flex-end; 
+}
+
+.input-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: #f2f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; 
+}
+
+.file-input-label {
+    background: url('imgs/attachment.png') no-repeat center;
+    background-size: contain;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.file-name {
+    display: none; 
+    margin-left: 10px;
+    color: #666;
+    order: 2;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 18px;
+    margin-right: 10px; 
+}
+
+button.send-button {
+    background: url('imgs/send.png') no-repeat center;
+    background-size: contain;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+}
+
+button.send-button:hover {
+    opacity: 0.8;
+}
