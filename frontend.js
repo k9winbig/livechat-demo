@@ -3,7 +3,7 @@ $(function () {
 
   window.chatwoot = {};
   chatwoot.inboxIdentifier = "C2a9rvpq8KXj2oPp2qmzFJej";
-  chatwoot.chatwootAPIUrl = "https://livetest.cloud/public/api/v1/";
+  chatwoot.chatwootAPIUrl = "https://casinotogo.net/public/api/v1/";
 
   // Elements
   var content = $("#content");
@@ -11,7 +11,7 @@ $(function () {
   var status = $("#status");
 
   // WebSocket initialization
-  var connection = new WebSocket("wss://livetest.cloud/cable");
+  var connection = new WebSocket("wss://casinotogo.net/cable");
 
   connection.onopen = async function () {
     await setUpContact();
